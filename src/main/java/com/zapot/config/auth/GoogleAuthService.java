@@ -11,6 +11,7 @@ import com.zapot.enums.AuthProviderEnum;
 import com.zapot.enums.RolesEnum;
 import com.zapot.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cglib.core.Local;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 

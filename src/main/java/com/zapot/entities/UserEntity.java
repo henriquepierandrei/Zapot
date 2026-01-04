@@ -25,6 +25,7 @@ public class UserEntity {
 
     private String email;
 
+    @Column(unique = true)
     private String googleId;        // Id da conta google vinculada
 
     private AuthProviderEnum authProvider;
