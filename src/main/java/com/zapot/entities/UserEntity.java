@@ -21,6 +21,8 @@ public class UserEntity {
     @Nullable
     private String hashPassword;
 
+    private String userPicture;
+
     private String email;
 
     private String googleId;        // Id da conta google vinculada
@@ -35,6 +37,8 @@ public class UserEntity {
 
     private Boolean isActive;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
     private Set<RolesEnum> roles;
 
     public UserEntity() {
@@ -61,6 +65,14 @@ public class UserEntity {
     @Nullable
     public String getHashPassword() {
         return hashPassword;
+    }
+
+    public String getUserPicture() {
+        return userPicture;
+    }
+
+    public void setUserPicture(String userPicture) {
+        this.userPicture = userPicture;
     }
 
     public void setHashPassword(@Nullable String hashPassword) {
